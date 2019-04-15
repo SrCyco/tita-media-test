@@ -1,0 +1,67 @@
+.content{
+    &__texts{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 40.10vw auto;
+        grid-template-rows: auto;
+        column-gap: 1.042vw;
+        grid-template-areas: "header image"
+                         "desc  image"
+                         "cta  image";
+    }
+    &__header{
+        grid-area: header;
+        // margin-bottom: 6.33vh;
+    }
+    &__title{
+        display: inline-block;
+        padding-bottom: .65vh;
+        font-size: 2em;
+        margin-bottom: .5em; 
+        @extend %underline;
+        &:after{
+            width: 70%;
+        }
+    }
+    &__title, &__subtitle{
+        color: $color_dark;
+    }
+    &__desc{
+        grid-area: desc;
+        text-align: justify;
+        color: $color_gray;
+        line-height: 1.8em;
+    }
+    &__image{
+        grid-area: image;
+        width: 100%;
+    }
+    &__cta-area{
+        grid-area: cta;
+    }
+    &__cta{
+        color: $color_green;
+        @extend %underline;
+    }
+    @include mq('tablet'){
+        &__texts{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, auto);
+            row-gap: 5.5vh;
+            grid-template-areas: "header"
+                                "desc"
+                                "image"
+                                "cta";
+            margin-bottom: 8.8vh;
+        }
+        &__image{
+            width: 50%;
+            justify-self: center;
+        }
+    }
+    @include mq('tablet'){
+        &__title{
+            font-size: 1.5em;
+        }
+    }
+}

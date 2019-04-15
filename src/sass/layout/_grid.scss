@@ -1,0 +1,7 @@
+.grid{
+    width: $normal_grid;
+    margin: 0 auto;
+    @include mq('tablet'){
+        width: $tablet_grid;
+    }
+}

@@ -1,0 +1,40 @@
+body{
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    @include mq('desktop-wide'){
+        font-size: 12px;
+    }
+    @include mq('tablet'){
+        font-size: 16px;
+    }
+    @include mq('phone-wide'){
+        font-size: 14px;
+    }
+    @include mq('phone'){
+        font-size: 12px;
+    }
+}
+
+body, figure, ul, h1, h2, h3, p {
+    margin: 0;
+}
+
+img{
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    font-weight: 400;
+
+}

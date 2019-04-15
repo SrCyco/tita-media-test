@@ -1,0 +1,46 @@
+.carousel{
+    margin-bottom: 9.5vh;
+    .glide{
+        &__slide{
+            position: relative;
+        }
+        &__bullets{
+            display: none;
+        }
+    }
+    
+    .slide__text{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: $color_white;
+        font-weight: 700;
+        font-size: 2.75em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        line-height: 1.93em;
+    }
+    @include mq('tablet'){
+        .slide__text{
+            font-size: 1.4em;
+        }
+        .glide{
+            &__arrows{
+                display: none;
+            }
+            &__bullets{
+                display: block;
+                bottom: .5em;
+            }
+        }
+    }
+    @include mq('phone-wide'){
+        .slide__text{
+            font-size: 1em;
+        }
+    }
+    
+}

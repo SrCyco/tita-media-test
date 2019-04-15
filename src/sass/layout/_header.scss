@@ -1,0 +1,169 @@
+.header{
+    background: $color_white;
+    height: 13.5vh;
+    transition: height .2s;
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        height: inherit;
+        align-items: center;
+    }
+    &__image{
+        width: 10.88vw;
+    }
+    &__hamburguer{
+        width: 4.68vw;
+        height: 3.68vw;
+        position: relative;
+        display: none;
+        span{
+            height: 2px;
+            background-color: $color_green;
+            width: 100%;
+            display: block;
+            position: absolute;
+            transition: .2s ease-in;
+            &:first-child{
+                top: 0;
+            }
+            &:nth-child(2){
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:last-child{
+                top: calc(100% - 2px);
+            }
+        }
+    }
+    @include mq('tablet'){
+        height: $header_height;
+        .grid{
+            height: auto;
+            flex-direction: column;
+        }
+        &__wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: $header_height;
+        }
+        &__image{
+            width: 23.43vw;
+        }
+        &__hamburguer{
+            display: block;
+        }
+        &.open-menu{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: $color_white;
+            z-index: 3;
+            height: auto;
+            border-bottom: 1px solid rgba($color: $color_gray, $alpha: .4) ;
+            height: 100vh;
+            .nav{
+                display: block;
+                width: 100%;
+            }
+            + .carousel{
+                margin-top: $header_height;
+            }
+            .header__hamburguer{
+                overflow: hidden;
+                span{
+                    &:first-child, &:last-child{
+                        transform-origin: left center;
+                        left: 50%;
+                        top: 50%;
+
+                    }
+                    &:first-child{
+                        transform: rotate(45deg) translate(-50%, -50%);
+                    }
+                    &:nth-child(2){
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                    &:last-child{
+                        transform: rotate(-45deg) translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav{
+    height: inherit;
+    &__list{
+        height: inherit;
+        display: flex;
+        justify-content: center;
+    }
+    &__item{
+        margin: 0 .88vw;
+        position: relative;
+        height: inherit;
+        &:hover{
+            > .nav__link{
+                color: $color_green;
+            }
+            > .nav__sublist{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    &__link{
+        color: $color_gray;
+        height: inherit;
+        display: flex;
+        align-items: center;
+    }
+    &__sublist{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color_white;
+        transition: .2s ease;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        .nav__subitem{
+            margin: 0;
+        }
+        .nav__link{
+            padding: 1.58vh 1.66vw;
+            white-space: nowrap;   
+        }
+    }
+    @include mq('tablet'){
+        display: none;
+        &__list{
+            flex-direction: column;
+        }
+        &__sublist{
+            height: 0;
+            opacity: 1;
+            visibility: visible;
+            position: inherit;
+            overflow: hidden;
+            &.open-submenu{
+                height: auto;
+                border-bottom: 1px solid rgba($color: $color_gray, $alpha: .4);
+            }
+            .nav__link{
+                padding-left: 3vh;
+                border-bottom: 0;
+            }
+        }
+        &__link{
+            padding: 2vh 0;
+            text-align: right;
+            border-bottom: 1px solid rgba($color: $color_gray, $alpha: .4);
+        }
+    }
+}

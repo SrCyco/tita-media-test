@@ -1,0 +1,12 @@
+%underline{
+    position: relative;
+    &:after{
+        @include pseudo;
+        bottom: -3px;
+        height: 1px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color_green;
+    }
+}

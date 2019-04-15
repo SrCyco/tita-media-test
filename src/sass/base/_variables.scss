@@ -1,0 +1,27 @@
+// Colors
+
+$color_white: #ffffff;
+$color_black: #000000;
+$color_gray: #777777;
+$color_dark: #363636;
+$color_green: #11977e;
+
+
+$normal_grid: 61.04%;
+$tablet_grid: 80%;
+
+$header_height: 8.5vh;
+
+
+$breakpoints: (
+    "phone":                400px,
+    "phone-wide":           480px,
+    "phablet":              560px,
+    "tablet-small":         640px,
+    "tablet":               768px,
+    "phone-landscape":      813px,
+    "tablet-wide":          1024px,
+    "desktop":              1280px,
+    "desktop-wide":         1440px,
+    "desktop-ultrawide":    1680px,
+);

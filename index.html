@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing test</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <!-- <link rel="stylesheet" href="http://localhost:8080/dist/css/main.css"> -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="grid">
+            <div class="header__wrapper">
+                <figure class="header__image">
+                    <a href="">
+                        <img src="src/assets/images/LOGO_HERE.png" alt="">
+                    </a>
+                </figure>
+                <div class="header__hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">HOME</a>
+                        <ul class="nav__sublist">
+                            <li class="nav__subitem">
+                                <a href="" class="nav__link">sub item 1</a>
+                            </li>
+                            <li class="nav__subitem">
+                                <a href="" class="nav__link">sub item 2</a>
+                            </li>
+                            <li class="nav__subitem">
+                                <a href="" class="nav__link">sub item 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="" class="nav__link">ABOUT</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">PRODUCTS</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <article class="carousel">
+        <div class="glide">
+            <div data-glide-el="track" class="glide__track">
+                <div class="glide__slides"></div>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]"></div>
+        </div>
+    </article>
+
+    <article class="content grid">
+        <section class="content__texts">
+            <div class="content__header">
+                <h1 class="content__title">Lorem ipsum dolor sit amet</h1>
+                <h3 class="content__subtitle">Lorem ipsum dolor sit amet</h3>
+            </div>
+            <p class="content__desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel accusamus molestiae tempora mollitia.
+                Natus et a odit impedit optio voluptatem officiis, perspiciatis iure dignissimos saepe, cum inventore
+                facilis! Porro, cum.Accusamus, magnam vitae. Esse unde nulla nesciunt est atque laborum ipsa impedit nam
+                nihil, aspernatur repudiandae perferendis ea dolores odio nemo. Eveniet aspernatur excepturi tempore
+                saepe expedita molestiae placeat magnam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel accusamus molestiae
+            </p>
+            <figure class="content__image">
+                <img src="src/assets/images/phone.png" alt="">
+            </figure>
+            <div class="content__cta-area">
+                <a href="" class="content__cta">You can learn more about the sample here.</a>
+            </div>
+        </section>
+    </article>
+    <script src="dist/bundle.js"></script>
+    <!-- <script src="http://localhost:8080/dist/bundle.js"></script> -->
+</body>
+
+</html>

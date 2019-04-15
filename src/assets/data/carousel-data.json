@@ -1,0 +1,19 @@
+{
+    "carousel": [
+        {
+            "pos": 1,
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit, Vitae voluptatum suscipit maxime",
+            "image": "src/assets/images/image-big.png"
+        },
+        {
+            "pos": 2,
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit, Vitae voluptatum suscipit maxime",
+            "image": "src/assets/images/image-big2.png"
+        },
+        {
+            "pos": 3,
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit, Vitae voluptatum suscipit maxime",
+            "image": "src/assets/images/image-big3.jpg"
+        }
+    ]
+}
